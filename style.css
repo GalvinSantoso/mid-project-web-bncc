@@ -1,0 +1,1017 @@
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Navbar */
+
+body{
+    background-color: #06062b;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-evenly;
+    padding: 10px;
+    font-weight: 500;
+}
+
+nav ul li a{
+    color: #8a8a8a;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 1s;
+    transition: color 1s;
+}
+
+
+nav ul li a:hover{
+    color: rgb(26, 187, 216);
+    border-bottom: 1px solid rgb(26, 187, 216);
+}
+
+nav .nama{
+    margin-left: 30px;
+    padding: 10px 10px 10px 200px;
+}
+
+nav .nama h1{
+    color: #8a8a8a;
+    font-weight: 600;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    margin-right: 80px;
+    position: relative;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 60px;
+    height: 28px;
+    left: -20px;
+    top: -6px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #8a8a8a;
+    border-radius: 3px;
+    transition: all 1.5s;
+}
+
+/* animation */
+.menu-toggle span:nth-child(2)
+{
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2)
+{
+    transform: rotate(45deg) translate(-1px ,-1px);
+    background-color: #0606b2;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3)
+{
+    transform: scale(0);
+    opacity: 0;
+}
+.menu-toggle span:nth-child(4)
+{
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4)
+{
+    transform: rotate(-45deg) translate(-1px,0);
+    background-color: #0606b2;
+}
+
+
+/* Home */
+.container-home{
+
+    display: flex;
+    width: 100%;
+    height: 750px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-home .content-home{
+    border: 1px solid lightskyblue;
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-home .content-home span{
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.container-home .content-home .kalimat1{
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background-color: #06062b;
+    position: relative;
+    animation: animasi 10s infinite;
+}
+
+.container-home .content-home .kalimat2{
+    font-size: 3vw;
+    color: white;
+    font-weight: 700;
+    animation: changecolor 10s infinite;
+}
+
+
+@keyframes changecolor{
+    25%{
+        color: rgb(34,101,247);
+    }
+    50%{
+        color: purple;
+    }
+    75%{
+        color: rgb(15, 236, 207);
+    }
+    90%{
+        color: lightblue;
+    }
+}
+
+@keyframes animasi{
+    0%{
+        color: #06062b;
+        margin-bottom: -50px;
+    }
+    30%{
+        letter-spacing: -20px;
+        color: orange;
+        margin-bottom: -50px;
+    }
+    50%{
+        color:purple;
+    }
+    75%{
+        color: rgb(15, 236, 207);
+    }
+    90%{
+        color: lightblue;
+    }
+}
+
+/* About Me */
+.container-aboutme{
+    height: 100%;
+    /* background-color: lightskyblue; */
+}
+
+.container-aboutme .judul-about{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+}
+
+.container-aboutme .judul-about h2{
+    position: relative;
+    font-size: 2vw;
+    color: #06062b;
+    -webkit-text-stroke: 0.1vw #96e5ff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.container-aboutme .judul-about h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color:  #4ae263;
+    -webkit-text-stroke: 0vw #96e5ff;
+    font-weight: 700;
+    overflow: hidden;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+
+.container-aboutme .content-about{
+    position: relative;
+    height: 775px;
+    display: flex;
+
+}
+.container-aboutme .content-about .sisi-kiri{
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.satu
+{
+    background-color: lightblue;
+    position: absolute;
+    top: 195px;
+    left: 70px;
+    opacity: 50%;
+    width: 650px;
+    height: 450px;
+    z-index: 1;
+}
+.dua{
+    background-color: pink;
+    position: absolute;
+    top: 185px;
+    left: 80px;
+    opacity: 75%;
+    width: 650px;
+    height: 450px;
+    z-index: 2;
+}
+.tiga{
+    background-color: orange;
+    position: absolute;
+    top: 175px;
+    left: 90px;
+    opacity: 90%;
+    width: 650px;
+    height: 450px;
+    z-index: 3;
+}
+
+.empat{
+    background-color: red;
+    position: absolute;
+    border-radius: 200px;
+    width: 100px;
+    height: 100px;
+    top:600px;
+    left: 30px;
+}
+.lima{
+    background-color: rgba(255, 0, 0, 0.788);
+    position: absolute;
+    border-radius: 200px;
+    width: 150px;
+    height: 150px;
+    right: 50px;
+    top: 100px;
+}
+.enam{
+    background-color:navy;
+    position: absolute;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    top: 600px;
+    right: 200px;
+    z-index: 11;
+    opacity: 80%;
+}
+.tujuh{
+    background-color:navy;
+    position: absolute;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    top: 200px;
+    left: 35px;
+    z-index: 11;
+    opacity: 80%;
+}
+.delapan{
+    background-color: greenyellow;
+    position: absolute;
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+    top: 80px;
+    left: 150px;
+    opacity: 80%;
+
+}
+.container-aboutme .content-about .sisi-kiri img{
+    width: 650px;
+    height: 450px;
+    z-index: 10;
+}
+
+.container-aboutme .content-about .sisi-kanan{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.container-aboutme .content-about .sisi-kanan .kotak-kanan{
+    width: 750px;
+    height:650px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 100px auto;
+}
+
+.container-aboutme .content-about .sisi-kanan span{
+    font-size: 20px;
+    font-weight: 800;
+    color:white;
+}
+.container-aboutme .content-about .sisi-kanan h4{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container-aboutme .content-about .sisi-kanan h5{
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(0, 238, 247);
+    margin-bottom: 20px;
+}
+
+.container-aboutme .content-about .sisi-kanan p{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.container-aboutme .content-about .sisi-kanan table{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.container-aboutme .content-about .sisi-kanan table tr td{
+    border: 2px solid lightskyblue;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+.container-aboutme .content-about .sisi-kanan .kotak-kanan .sosmed{
+    height: 70px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+.container-aboutme .content-about .sisi-kanan .kotak-kanan .sosmed img{
+    height: 70px;
+    width: 70px;
+}
+
+/* about me skill software dan bahasa */
+
+.container-aboutme .skill{
+    height: 100%;
+}
+
+.container-aboutme .skill .judul-skill{
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.container-aboutme .skill .judul-skill h3{
+    -webkit-text-stroke: 0.1vw #ffd859;
+    color: #06062b;
+    font-size: 50px;
+    padding: 20px;
+    font-weight: 700;
+    margin-left: 50px;
+}
+
+.gambar-items-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gambar-item-wrapper{
+    position: relative;
+}
+
+.gambar-img-background{
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.logo-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-wrapper h1{
+    width: 100%;
+    margin-bottom: 20px;
+    color: transparent;
+    font-size: 70px;
+    font-weight: 600;
+    transition: 1s;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo-wrapper:hover h1{
+    -webkit-text-stroke: 0.1vw #ffd859;
+    font-weight: 600;
+    animation: logos 2s ease-in-out;
+}
+
+.img-darken{
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+@keyframes logos{
+    0%{
+        opacity: 0;
+        font-size: 0px;
+    }
+    100%{
+        opacity: 100%;
+        font-size: 70px;
+    }
+}
+
+/* Portofolio */
+
+.container-portofolio{
+    margin-top: 10px;
+    width: 100%;
+    height: 850px;
+}
+
+.container-portofolio .judul-portofolio{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+}
+
+.container-portofolio .judul-portofolio h1{
+    font-size: 2vw;
+    color: #06062b;
+    -webkit-text-stroke: 0.1vw #00ccff;
+    text-transform: uppercase;
+    animation: type 5s steps(14);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.container-portofolio .content-portofolio{
+    height: 775px;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  
+  }
+
+
+/* contact us */
+
+.container-contact-us{
+    width: 100%;
+    height: 850px;
+}
+
+.container-contact-us .judul-contact-us{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+
+.container-contact-us .judul-contact-us .neon{
+    font-size: 2vw;
+    text-shadow: 0 0 20px #e54ed0;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: #06062b;
+    -webkit-text-stroke: 0.1vw #e54ed0;
+
+}
+
+.container-contact-us .judul-contact-us .neon::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(25px);
+}
+
+
+.container-contact-us .judul-contact-us .neon::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #e54ed0;
+    z-index: -2;
+    opacity: .5; 
+    filter: blur(40px);
+}
+
+.container-contact-us .content-contact-us{
+    height: 775px;
+    width: 100%;
+    color: white;
+    display: flex;
+}
+
+.container-contact-us .content-contact-us .contact-information{
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact-us .content-contact-us .contact-information .wrapper-contact-information{
+    background-color: rgba(34, 40, 49, 0.9);
+    width: 400px;
+    height: 475px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.container-contact-us .content-contact-us .contact-information .wrapper-contact-information .judul-contact-information{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact-us .content-contact-us .contact-information .wrapper-contact-information .judul-contact-information h3{
+    font-size: 2vw;
+    padding: 20px;
+    font-weight: 800;
+    animation: 10s gantiwarna infinite;
+}
+
+.container-contact-us .content-contact-us .contact-information .wrapper-contact-information .isi-contact-information{
+    display: flex;
+    justify-content: space-evenly;
+    height: 350px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-contact-us .content-contact-us .contact-information .wrapper-contact-information .isi-contact-information .isinya-contact-information{
+    padding: 20px;
+    width: 300px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    background-color: rgba(238, 237, 237, 0.5);
+    text-align: center;
+}
+
+.container-contact-us .content-contact-us .contact-information .wrapper-contact-information .isi-contact-information .isinya-contact-information span{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+.container-contact-us .content-contact-us .garis-tengah-portofolio{
+    background-color: rgb(149, 148, 150);
+    box-sizing: border-box;
+    margin-top: 120px;
+    height: 600px;
+    width: 1%;
+    display: flex;
+}
+.container-contact-us .content-contact-us .contact-isi{
+
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact-us .content-contact-us .contact-isi .contact-isi-form{
+    height: 475px;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.container-contact-us .content-contact-us .contact-isi .contact-isi-form .contact-isinya-form{
+    margin-bottom: 25px;
+}
+
+.container-contact-us .content-contact-us .contact-isi .contact-isi-form .contact-isinya-form label{
+    display: block;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.container-contact-us .content-contact-us .contact-isi .contact-isi-form .contact-isinya-form input{
+    width: 100%;
+    font-size: 15px;
+    display: block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: rgba(238, 237, 237, 1);
+}
+.container-contact-us .content-contact-us .contact-isi .contact-isi-form .contact-isinya-form textarea{
+    font-size: 20px;
+    display: block;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    color: rgba(238, 237, 237, 1);
+}
+.container-contact-us .content-contact-us .contact-isi button{
+    padding: 10px 25px;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(149, 148, 150);
+}
+textarea{
+    overflow: auto;
+    resize: vertical;
+}
+@keyframes gantiwarna{
+    0% {
+        color: #1d99ff;
+    }
+    25% {
+        color: rgb(34, 101, 247);
+    }
+    50% {
+        color: rgb(15, 236, 207);
+    }
+    75% {
+        color: #f00ddd;
+    }
+    100% {
+        color: #ff07d6;
+    }
+}
+
+
+
+
+@keyframes type{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 13ch;
+    }
+}
+
+
+
+/* responsive */
+
+@media screen and (min-width : 799px)
+{
+    nav ul {
+        width: 50%;
+    }
+    .menu-toggle{
+        display: none;
+    }
+}
+
+@media screen and (max-width:799px)
+{
+    .menu-toggle{
+        display: flex;
+        z-index: 9999;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        top: 0;
+        height: 100vh;
+        background-color: white;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 40%;
+        z-index: 9999;
+        transform: translateX(100%);
+        transition: all 1.5s;
+        opacity: 0;
+    }
+    @keyframes animasi{
+        0%{
+            color: #06062b;
+            margin-bottom: -20px;
+        }
+        30%{
+            letter-spacing: -5px;
+            color: orange;
+            margin-bottom: -20px;
+        }
+        70%{
+            color:purple;
+        }
+        80%{
+            color: navy;
+        }
+        90%{
+            color: lightblue;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:425px)
+{
+    .menu-toggle{
+        display: flex;
+        z-index: 9999;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        top: 0;
+        height: 100vh;
+        background-color: white;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 20%;
+        z-index: 9999;
+        transform: translateX(100%);
+        transition: all 1.5s;
+        opacity: 0;
+    }
+    @keyframes animasi{
+        0%{
+            color: #06062b;
+            margin-bottom: -10px;
+        }
+        30%{
+            letter-spacing: -5px;
+            color: orange;
+            margin-bottom: -10px;
+        }
+        70%{
+            color:purple;
+        }
+        80%{
+            color: navy;
+        }
+        90%{
+            color: lightblue;
+        }
+    }
+}
+
+
+nav ul.slide{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
